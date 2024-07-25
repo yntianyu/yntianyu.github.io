@@ -8,7 +8,6 @@
   font-style: normal;
 }
 
-
 @font-face {
   /* regular */
   font-family: "Khula", sans-serif;
@@ -52,12 +51,17 @@ h1 {
 h2 {
   color: #BAD2E2;
   font-size: 16px;
-  margin-bottom: 20px;
 }
 
 
 
+
+
+
+
+
 /* search bar customizations */
+
 .search-container {
   display: flex;
   align-items: center;
@@ -99,7 +103,14 @@ h2 {
 }
 
 
+
+
+
+
+
+
 /* nav bar customizations */
+
 .navbar {
 position: fixed;
 top: 0;
@@ -128,6 +139,13 @@ font-weight: 400; /* Regular font weight */
 .nav-link:hover {
 color: #001A44;
 }
+
+
+
+
+
+
+
 
 /* header search box customizations */
 
@@ -160,9 +178,15 @@ color: #001A44;
 }
 
 
+
+
+
+
+
+
 /* about me page */
 
-.container {
+.abtme-container {
   max-width: 70vw;
   margin: 0 auto;
   padding: 20px;
@@ -171,7 +195,7 @@ color: #001A44;
 .abtme-header {
   color: #BAD2E2;
   font-size: 16px;
-  margin-top: 20px;
+  margin-top: 5px;
 }
 
 .abtme-header2 {
@@ -190,9 +214,10 @@ color: #001A44;
 }
 
 .image-column img {
+  margin-top: 20px;
   flex-basis: 80%;
   width: 100%;
-  height: auto;
+  height: 90%;
   border: 1px solid #BAD2E2; 
   border-radius: 8px;
 }
@@ -203,8 +228,6 @@ color: #001A44;
   flex-direction: column;
   justify-content: center;
 }
-
-
 
 .highlight-container {
   position: relative;
@@ -346,6 +369,86 @@ color: #001A44;
 }
 
 
+
+
+
+HIJIHIHIHIHIHIHIH START HEREEEEEEEEEEE I DIDN'T DO ANYTHING TO THE SKILLS PAGE CUZ I'M DYING
+
+
+/* skills page */
+
+.skills-container {
+  max-width: 70vw;
+  display: flex;
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+.skills-lists {
+  display: flex;
+  width: 60%;
+  gap: 40px;
+}
+
+.skill-column {
+  flex: 1;
+}
+
+.skill-category {
+  margin-bottom: 20px;
+}
+
+.skill-category h3 {
+  font-family: 'Your Handwritten Font', cursive;
+  border-bottom: 1px solid #000;
+  margin-bottom: 10px;
+}
+
+.skill-category ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.skills-progress {
+  width: 35%;
+  background-color: #1a2b4a;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.progress-item {
+  margin-bottom: 15px;
+}
+
+.progress-item span {
+  color: white;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  background-color: #2d4373;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  background-color: white;
+  height: 100%;
+}
+
+.wip {
+  font-style: italic;
+
+
+
+
+
+
+
+
 .scroll-indicator {
   text-align: center;
   margin-top: 20px;
@@ -354,4 +457,9 @@ color: #001A44;
 .scroll-indicator img {
   width: 20px;
   height: 20px;
+}
+
+html {
+  scroll-padding-top: 120px; /* Adjust this value as needed */
+  scroll-behavior: smooth;
 }
