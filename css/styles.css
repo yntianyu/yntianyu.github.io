@@ -231,7 +231,7 @@ color: #001A44;
   transform: translateY(-50%);
   z-index: 1;
   margin-left: 20px; 
-  width: calc(100% - 40px); /* Adjust this value to make the rectangle less wide */ 
+  width: calc(100% - 50px); /* Adjust this value to make the rectangle less wide */ 
 }
 
 .info-item {
