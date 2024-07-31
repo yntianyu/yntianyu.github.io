@@ -24,6 +24,14 @@
   font-style: normal;
 }
 
+@font-face {
+  /* bold */
+  font-family: "Khula", sans-serif;
+  src: url('fonts/Khula-Bold.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+
 .licorice-regular {
   font-family: "Licorice", cursive;
   font-weight: 400;
@@ -60,6 +68,18 @@ h2 {
 
 
 
+/* container for all page margins */
+.page-container{
+  margin-top: 34vh;
+  margin-bottom: 30vh;
+}
+
+
+
+
+
+
+
 /* search bar customizations */
 
 .search-container {
@@ -86,6 +106,7 @@ h2 {
   font-size: 20px;
   white-space: nowrap;
   color: #02131D;
+  font-weight: 500;
   animation: 
     typing 1s steps(18, end),
     blink-caret .75s step-end infinite;
@@ -148,13 +169,7 @@ color: #001A44;
 
 
 /* header search box customizations */
-
-.rectangle {
-  padding: 140px 40px;
-  background-color: #F5F6F8;
-  }
-
-.content-container {
+.search-content-container {
   max-width: 50vw;
   margin-left: auto;
   margin-right: auto;
@@ -370,12 +385,7 @@ color: #001A44;
 
 
 
-
-
-/* HIJIHIHIHIHIHIHIH START HEREEEEEEEEEEE I DIDN'T DO ANYTHING TO THE SKILLS PAGE CUZ I'M DYING 
-
-
- skills page 
+/* skills page */
 
 .skills-container {
   max-width: 70vw;
@@ -460,6 +470,5 @@ color: #001A44;
 }
 
 html {
-  scroll-padding-top: 140px; /* Adjust this value as needed */
   scroll-behavior: smooth;
 }
