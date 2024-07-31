@@ -59,6 +59,7 @@ h1 {
 h2 {
   color: #BAD2E2;
   font-size: 16px;
+  margin-bottom: 20px;
 }
 
 
@@ -200,11 +201,12 @@ color: #001A44;
 
 
 /* about me page */
-
 .abtme-container {
   max-width: 70vw;
   margin: 0 auto;
   padding: 20px;
+  padding-top: 18vh; 
+  margin-top: -18vh; 
 }
 
 .abtme-header {
@@ -388,11 +390,31 @@ color: #001A44;
 /* skills page */
 
 .skills-container {
-  max-width: 70vw;
+  max-width: 65vw;
   display: flex;
+  margin: 0 auto;
   align-items: center;
-
   justify-content: space-between;
+}
+
+.skills-header {
+  font-size: 35px;
+  font-family: "Licorice", cursive;
+  position: relative;
+  display: inline-block;
+  line-height: 1.8;
+}
+
+.skills-header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 6px; 
+  height: 1px; 
+  background-color: #1a2b4a;
+  z-index: -1;
+  width: 250px; 
 }
 
 .skills-lists {
@@ -401,19 +423,6 @@ color: #001A44;
   gap: 40px;
 }
 
-.skill-column {
-  flex: 1;
-}
-
-.skill-category {
-  margin-bottom: 20px;
-}
-
-.skill-category h3 {
-  font-family: 'Your Handwritten Font', cursive;
-  border-bottom: 1px solid #000;
-  margin-bottom: 10px;
-}
 
 .skill-category ul {
   list-style-type: none;
@@ -421,37 +430,37 @@ color: #001A44;
 }
 
 .skills-progress {
-  width: 35%;
-  background-color: #1a2b4a;
-  padding: 20px;
-  border-radius: 10px;
+  width: 50%;
+  background-color: #001A44;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  border-radius: 8px;
 }
 
 .progress-item {
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
 .progress-item span {
-  color: white;
+  color: #F5F6F8;
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
 }
 
 .progress-bar {
   background-color: #2d4373;
   height: 10px;
   border-radius: 5px;
+  margin-bottom: 35px;
   overflow: hidden;
 }
 
 .progress {
-  background-color: white;
+  background-color: #F5F6F8;
   height: 100%;
 }
-
-.wip {
-  font-style: italic;
-*/
 
 
 
