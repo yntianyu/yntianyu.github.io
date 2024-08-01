@@ -51,9 +51,9 @@ body {
 h1 {
   font-family: "Licorice", cursive;
   color: #02131D;
-  font-size: 52px;
+  font-size: 53px;
   font-weight: normal;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 h2 {
@@ -82,14 +82,7 @@ h2 {
 }
 
 .info-column {
-  flex-basis: 20%;
-  display: flex;
-  flex-direction: column;
-  justify-content: top;
-}
-
-.info-column2 {
-  flex-basis: 20%;
+  flex-basis: 100%;
   display: flex;
   flex-direction: column;
   justify-content: top;
@@ -233,7 +226,7 @@ color: #001A44;
 .abtme-header2 {
   color: #BAD2E2;
   font-size: 16px;
-  margin-left: 206px;
+  margin-left: 200px;
 }
 
 .column {
@@ -301,7 +294,7 @@ color: #001A44;
   height: 1px; /* Adjust the height of the underline */
   background-color: #BAD2E2;
   z-index: -1;
-  width: calc(100% + 110px);
+  width: 214px;
 }
 
 .underline2 {
@@ -310,7 +303,7 @@ color: #001A44;
   position: relative;
   display: inline-block;
   line-height: 1.2;
-  margin-left:136px;
+  margin-left:140px;
 }
 
 .underline2::after {
@@ -322,7 +315,7 @@ color: #001A44;
   height: 1px; /* Adjust the height of the underline */
   background-color: #BAD2E2;
   z-index: -1;
-  width: calc(100% + 110px);
+  width: 214px;
 }
 
 .underline3 {
