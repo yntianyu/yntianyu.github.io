@@ -88,6 +88,13 @@ h2 {
   justify-content: top;
 }
 
+.info-column2 {
+  flex-basis: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: top;
+}
+
 
 
 
