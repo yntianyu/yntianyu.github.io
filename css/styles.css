@@ -434,21 +434,7 @@ color: #001A44;
 
 
 
-.experience {
-  align-items: center;
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #f8f8f8;
-  font-family: Arial, sans-serif;
-}
 
-.experience h2 {
-  color: #999;
-  text-transform: lowercase;
-  font-weight: normal;
-  margin-bottom: 20px;
-}
 
 .experience-item {
   display: flex;
@@ -466,19 +452,6 @@ color: #001A44;
 
 .experience-details {
   flex-grow: 1;
-}
-
-.experience-details h3 {
-  font-family: 'Brush Script MT', cursive;
-  font-size: 1.2em;
-  margin: 0;
-  color: #333;
-}
-
-.experience-details p {
-  font-size: 0.9em;
-  color: #666;
-  margin: 5px 0 0;
 }
 
 .expand-btn {
