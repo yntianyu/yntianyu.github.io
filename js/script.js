@@ -34,21 +34,21 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      
-      const targetId = this.getAttribute('href').substring(1);
-      const targetElement = document.getElementById(targetId);
-      
-      if (targetElement) {
-        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
-        const offset = window.innerHeight / 2; // Center of the screen
-        
-        window.scrollTo({
-          top: targetPosition - offset,
-          behavior: 'smooth'
+document.addEventListener('DOMContentLoaded', function() {
+    const experienceItems = document.querySelectorAll('.experience-item');
+  
+    experienceItems.forEach(item => {
+      const header = item.querySelector('.experience-header');
+      header.addEventListener('click', () => {
+        // Close all other dropdowns
+        experienceItems.forEach(otherItem => {
+          if (otherItem !== item && otherItem.classList.contains('active')) {
+            otherItem.classList.remove('active');
+          }
         });
-      }
+        
+        // Toggle the clicked dropdown
+        item.classList.toggle('active');
+      });
     });
   });
