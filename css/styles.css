@@ -176,16 +176,16 @@ margin-left: auto; /* Push nav items to the right */
 margin-left: 40px; /* Space between nav items */
 }
 
-.link {
-color: #001A44; 
-font-size: 16px; /* Adjust font size as needed */
-text-transform: lowercase; /* Lowercase text as shown in the image */
-font-weight: 400; /* Regular font weight */
-}
-
-.link:hover {
-color: #001A44;
-}
+.nav-link {
+  color: #001A44; 
+  font-size: 16px; /* Adjust font size as needed */
+  text-transform: lowercase; /* Lowercase text as shown in the image */
+  font-weight: 400; /* Regular font weight */
+  }
+  
+  .nav-link:hover {
+  color: #001A44;
+  }
 
 
 
@@ -447,12 +447,12 @@ color: #001A44;
 .experience-item {
   display: flex;
   align-items: center;
-  padding: 15px 0;
-  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 0;
+  border-bottom: 2px solid #001A44;
 }
 
 .company-logo {
-  width: 100px;
+  width: 80px;
   margin-right: 15px;
   object-fit: contain;
   border-radius: 100%;
@@ -466,14 +466,13 @@ color: #001A44;
   background: none;
   border: none;
   font-size: 1.2em;
-  color: #999;
+  color: #001A44;
   cursor: pointer;
 }
 
 .dropdown-content {
   display: none;
   padding: 10px;
-  background-color: #f9f9f9;
 }
 
 .experience-item.active .dropdown-content {
