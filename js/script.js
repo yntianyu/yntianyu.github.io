@@ -34,21 +34,22 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+
 document.addEventListener('DOMContentLoaded', function() {
-    const experienceItems = document.querySelectorAll('.experience-item');
+    const dropdowns = document.querySelectorAll('.dropdown');
   
-    experienceItems.forEach(item => {
-      const header = item.querySelector('.experience-header');
+    dropdowns.forEach(dropdown => {
+      const header = dropdown.querySelector('.dropdown-header');
+      const content = dropdown.querySelector('.dropdown-content');
+  
       header.addEventListener('click', () => {
-        // Close all other dropdowns
-        experienceItems.forEach(otherItem => {
-          if (otherItem !== item && otherItem.classList.contains('active')) {
-            otherItem.classList.remove('active');
-          }
-        });
-        
-        // Toggle the clicked dropdown
-        item.classList.toggle('active');
+        dropdown.classList.toggle('active');
+        if (dropdown.classList.contains('active')) {
+          content.style.display = 'block';
+        } else {
+          content.style.display = 'none';
+        }
       });
     });
   });
+  

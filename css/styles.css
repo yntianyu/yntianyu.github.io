@@ -448,7 +448,7 @@ margin-left: 40px; /* Space between nav items */
   display: flex;
   align-items: center;
   padding: 10px 0;
-  border-bottom: 2px solid #001A44;
+  border-bottom: 1.5px solid #001A44;
 }
 
 .company-logo {
@@ -463,26 +463,26 @@ margin-left: 40px; /* Space between nav items */
 }
 
 .expand-btn {
-  background: none;
+  width: 20px; /* Adjust based on your image size */
+  height: 20px; /* Adjust based on your image size */
+  background-image: url('images/up.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
   border: none;
-  font-size: 1.2em;
-  color: #001A44;
   cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.dropdown.active .expand-btn {
+  transform: rotate(180deg);
 }
 
 .dropdown-content {
   display: none;
   padding: 10px;
 }
-
-.experience-item.active .dropdown-content {
-  display: block;
-}
-
-.experience-item.active .expand-btn {
-  transform: rotate(180deg);
-}
-
 
 
 
