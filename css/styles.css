@@ -81,6 +81,7 @@ h3 {
 
 .page-container{
   padding-top: 15vh;
+  padding-bottom: 5vh;
   max-width: 70vw;
   margin: auto;
 }
@@ -234,7 +235,7 @@ margin-left: 40px; /* Space between nav items */
 .abtme-header2 {
   color: #BAD2E2; 
   font-size: 16px;
-  margin-left: 200px;
+  margin-left: 2vw;
 }
 
 .column {
@@ -244,8 +245,8 @@ margin-left: 40px; /* Space between nav items */
 .image-column img {
   margin-top: 20px;
   flex-basis: 80%;
-  width: 90%;
-  height: 80%;
+  width: 30vw;
+  height: 60vh;
   border: 1px solid #BAD2E2; 
   border-radius: 8px;
   object-fit: cover;
@@ -285,6 +286,11 @@ margin-left: 40px; /* Space between nav items */
   margin-left: 20px;
 }
 
+.info-item p {
+    font-size: 32px;
+    font-family: "Licorice", cursive;
+}
+
 .underline {
   font-size: 32px;
   font-family: "Licorice", cursive;
@@ -302,7 +308,7 @@ margin-left: 40px; /* Space between nav items */
   height: 1px; /* Adjust the height of the underline */
   background-color: #BAD2E2;
   z-index: -1;
-  width: 214px;
+  width: 14.6vw;
 }
 
 .underline2 {
@@ -310,8 +316,7 @@ margin-left: 40px; /* Space between nav items */
   font-family: "Licorice", cursive;
   position: relative;
   display: inline-block;
-  line-height: 1.2;
-  margin-left:140px;
+  line-height: 1.4;
 }
 
 .underline2::after {
@@ -323,28 +328,26 @@ margin-left: 40px; /* Space between nav items */
   height: 1px; /* Adjust the height of the underline */
   background-color: #BAD2E2;
   z-index: -1;
-  width: 214px;
+  width: 31.5vw;
 }
 
-.underline3 {
-  font-size: 32px;
-  font-family: "Licorice", cursive;
+.full-width-underline {
   position: relative;
   display: inline-block;
-  line-height: 1.2;
+  padding-bottom: 5px; /* Space between text and underline */
 }
 
-.underline3::after {
-  content: '';
+.full-width-underline::before {
+  content: "";
   position: absolute;
   left: 0;
-  right: 0;
-  bottom: 6px; /* Adjust this value to position the underline */
-  height: 1px; /* Adjust the height of the underline */
-  background-color: #BAD2E2;
-  z-index: -1;
-  width: 478px;
+  bottom: 0;
+  width: 100%;
+  height: 3px; /* Thickness of the underline */
+  background-color: black; /* Color of the underline */
+  z-index: -1; /* Ensure the underline is behind the text */
 }
+
 
 .value {
   font-family: "Licorice", cursive;
@@ -371,7 +374,7 @@ margin-left: 40px; /* Space between nav items */
   height: 1px; 
   background-color: #1a2b4a;
   z-index: -1;
-  width: 250px; 
+  width: 18vw; 
 }
 
 .wip-section {
