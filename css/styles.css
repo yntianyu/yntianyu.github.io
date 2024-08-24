@@ -249,9 +249,9 @@ margin-left: 40px; /* Space between nav items */
 
 .image-column img {
   margin-top: 20px;
-  flex-basis: 80%;
+  flex-basis: 100%;
   width: 30vw;
-  height: 60vh;
+  height: 65vh;
   border: 1px solid #BAD2E2; 
   border-radius: 8px;
   object-fit: cover;
