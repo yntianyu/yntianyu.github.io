@@ -35,21 +35,22 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    const dropdowns = document.querySelectorAll('.dropdown');
-  
-    dropdowns.forEach(dropdown => {
-      const header = dropdown.querySelector('.dropdown-header');
-      const content = dropdown.querySelector('.dropdown-content');
-  
-      header.addEventListener('click', () => {
-        dropdown.classList.toggle('active');
-        if (dropdown.classList.contains('active')) {
-          content.style.display = 'block';
-        } else {
-          content.style.display = 'none';
-        }
-      });
-    });
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    /* Toggle between adding and removing the "active" class,
+    to highlight the button that controls the panel */
+    this.classList.toggle("active");
+
+    /* Toggle between hiding and showing the active panel */
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
   });
-  
+}
+

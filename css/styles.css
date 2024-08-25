@@ -102,6 +102,19 @@ h3 {
   font-family: "Licorice", cursive;
 }
 
+a:link { 
+  text-decoration: none;
+} 
+a:visited { 
+  text-decoration: none; 
+} 
+a:hover { 
+  text-decoration: none; 
+} 
+a:active { 
+  text-decoration: none; 
+}
+
 
 
 
@@ -187,10 +200,6 @@ margin-left: 40px; /* Space between nav items */
   font-size: 16px; /* Adjust font size as needed */
   text-transform: lowercase; /* Lowercase text as shown in the image */
   font-weight: 400; /* Regular font weight */
-  }
-  
-  .nav-link:hover {
-  color: #001A44;
   }
 
 
@@ -470,26 +479,54 @@ margin-left: 40px; /* Space between nav items */
   flex-grow: 1;
 }
 
-.expand-btn {
-  width: 20px; /* Adjust based on your image size */
-  height: 20px; /* Adjust based on your image size */
-  background-image: url('images/up.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent;
-  border: none;
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #F5F6F8;
+  color: #001A44;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 2s;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1.5px solid #001A44;
 }
 
-.dropdown.active .expand-btn {
-  transform: rotate(180deg);
-}
-
-.dropdown-content {
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 20px;
   display: none;
-  padding: 10px;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  margin-bottom: 30px;
+  color: #001A44;
+}
+
+.projects-panel {
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.5s ease-in-out;
+  margin-bottom: 30px;
+  color: #001A44;
+  display: flex;
+  align-items: center;
+}
+
+.arrow-container img {
+  width: 1.5vw;
+  transition: transform 0.3s ease-in-out;
+}
+
+.arrow-container.active img {
+  transform: rotate(180deg); /* Rotate the arrow when active */
+}
+
+.projects-panel h3 {
+  font-size: 30px; /* Adjust font size as needed */
 }
 
 
