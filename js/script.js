@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 left: 0,
                 behavior: 'smooth'
             });
-        });
+        }); 
     }
 
     // Optional: Add a subtle animation to the content container on page load

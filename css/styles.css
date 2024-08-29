@@ -493,7 +493,7 @@ margin-left: 40px; /* Space between nav items */
   display: flex;
   align-items: center;
   padding: 10px 0;
-  border-top: 1.5px solid #001A44;
+  border-top: 1.5px solid #001A44; 
 }
 
 /* Style the accordion panel. Note: hidden by default */
