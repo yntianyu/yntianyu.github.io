@@ -89,25 +89,25 @@ const PROFILE = {
     {
       title: 'me, boiled down',
       date: 'Feb 2, 2026',
-      url: 'https://allentropy.netlify.app/',
+      url: 'https://yntianyu.github.io/allentropy/',
       excerpt: 'i downplay every single one of my achievements. i don\'t mean to, but somehow, it always comes back to these three words: "onto the next."',
     },
     {
       title: 'fearing, but also looking forward',
       date: 'Feb 2, 2026',
-      url: 'https://allentropy.netlify.app/',
+      url: 'https://yntianyu.github.io/allentropy/',
       excerpt: 'how do i verbalize this? i\'ve been thinking about this for a while, unsure of how to put pen to paper.',
     },
     {
       title: 'the hardest thing to understand in this world is our own feelings.',
       date: 'Dec 7, 2025',
-      url: 'https://allentropy.netlify.app/',
+      url: 'https://yntianyu.github.io/allentropy/',
       excerpt: '"we are a mosaic of everyone we\'ve ever loved." i\'ve been thinking about this quote a lot more often recently.',
     },
     {
       title: 'dump.',
       date: 'Dec 6, 2025',
-      url: 'https://allentropy.netlify.app/',
+      url: 'https://yntianyu.github.io/allentropy/',
       excerpt: 'small things that are on my mind.',
     },
   ],
@@ -399,7 +399,7 @@ function App() {
                 </li>
               ))}
             </ul>
-            <a className="widget-footer" href="https://allentropy.netlify.app/" target="_blank" rel="noreferrer" style={{color: 'inherit', textDecoration: 'none', display: 'block'}}>
+            <a className="widget-footer" href="https://yntianyu.github.io/allentropy/" target="_blank" rel="noreferrer" style={{color: 'inherit', textDecoration: 'none', display: 'block'}}>
               Read more posts &rarr;
             </a>
           </div>
