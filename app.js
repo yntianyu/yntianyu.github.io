@@ -331,7 +331,16 @@ function SingleBlogPostContent({ index, blogPosts }) {
         <p>{post.excerpt}</p>
       </div>
       <div style={{ borderTop: '1px solid var(--border)', paddingTop: '16px', marginTop: '24px' }}>
-        <a href={post.url} target="_blank" rel="noreferrer" style={{ color: 'var(--accent)', textDecoration: 'none', fontSize: '14px' }}>
+        <a 
+          href={post.url} 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          style={{ 
+            color: 'var(--accent)', 
+            textDecoration: 'none', 
+            fontSize: '14px'
+          }}
+        >
           View the entire post &rarr;
         </a>
       </div>
