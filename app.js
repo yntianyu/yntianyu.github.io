@@ -325,8 +325,49 @@ function App() {
   const [time, setTime] = React.useState('')
   const [blogPosts, setBlogPosts] = React.useState(PROFILE.blogPosts) // fallback to static
 
-  // Note: To enable real-time blog fetching, add an RSS feed to your Netlify blog
-  // and uncomment/update this useEffect to parse the feed
+  // Fetch blog posts from RSS feed
+  React.useEffect(() => {
+    const fetchBlogPosts = async () => {
+      try {
+        const response = await fetch('/feed.xml')
+        const text = await response.text()
+        const parser = new DOMParser()
+        const xml = parser.parseFromString(text, 'text/xml')
+        
+        const items = xml.querySelectorAll('item')
+        const posts = Array.from(items).map(item => {
+          const title = item.querySelector('title')?.textContent || ''
+          const link = item.querySelector('link')?.textContent || ''
+          const description = item.querySelector('description')?.textContent || ''
+          const pubDate = item.querySelector('pubDate')?.textContent || ''
+          
+          // Parse and format the date
+          const date = new Date(pubDate)
+          const formattedDate = date.toLocaleDateString('en-US', { 
+            month: 'short', 
+            day: 'numeric', 
+            year: 'numeric' 
+          })
+          
+          return {
+            title,
+            date: formattedDate,
+            url: link,
+            excerpt: description
+          }
+        })
+        
+        if (posts.length > 0) {
+          setBlogPosts(posts)
+        }
+      } catch (error) {
+        console.error('Error fetching blog posts:', error)
+        // Keep fallback posts on error
+      }
+    }
+    
+    fetchBlogPosts()
+  }, [])
 
   React.useEffect(() => {
     const updateTime = () => {
