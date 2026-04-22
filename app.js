@@ -1,6 +1,6 @@
 const PROFILE = {
   name: 'elizabeth yan',
-  tagline: 'design & machine learning enthusiast',
+  tagline: 'ai alignment & ml enthusiast',
   bio:
     'hello, and welcome! i am a senior at wellesley college majoring in computer science and mathematics. i am located in both the boston, ma, as well as seattle, wa area. as an avid explorer of philosophy, i have recently found myself immersed in issues with artificial intelligence surrounding privacy and security.',
   details: [
@@ -10,15 +10,19 @@ const PROFILE = {
     { label: 'fun fact', value: 'i was chosen to represent the usa rhythmic gymnastics group team at the olympic qualifiers!' },
   ],
   skills: [
-    { title: 'coding languages', items: ['TypeScript', 'JavaScript', 'Java', 'Python'] },
-    { title: 'frameworks', items: ['Shiny', 'Express.js'] },
-    { title: 'design', items: ['Notion', 'Canva', 'Figma'] },
+    { title: 'coding languages', items: ['Java', 'Python', 'JavaScript'] },
+    { title: 'ai/ml', items: ['TensorFlow', 'PyTorch'] },
     { title: 'data collection', items: ['Jupyter', 'Plotly', 'Pandas'] },
-    { title: 'front end', items: ['CSS', 'HTML', 'Flutter', 'React'] },
-    { title: 'devops', items: ['Git', 'Shell script/Bash'] },
   ],
-  wip: 'building evals & guardrails',
+  also: 'building evals & guardrails, red teaming',
   experience: [
+    {
+      org: 'CORDA Democracy Fellowship',
+      role: 'Fullstack Engineer',
+      dates: 'Apr 2026 - Present',
+      location: 'Boston, MA',
+      description: 'WIP!',
+    },
     {
       org: 'Dynamo AI',
       role: 'Machine Learning Engineer Intern',
@@ -62,58 +66,40 @@ const PROFILE = {
       description: 'I worked on a matrix learning block combining GWT and Scheme, and mentored 15 undergraduates in DALL-E and ChatGPT integration for educational applications.',
     },
   ],
-  projects: [
-    {
-      name: 'Connectify',
-      subtitle: 'MLH best networking hack',
-      description: 'Web platform for networking built in 48 hours with React, Tailwind CSS, and Firebase auth.',
-    },
-    {
-      name: 'Ruby the robot dog',
-      subtitle: 'Affiliated with App Inventor',
-      description: 'Reinforcement learning system using Python and OpenAI API with a Kotlin interface.',
-    },
-    {
-      name: 'Block builder for RAG',
-      subtitle: 'Work in progress',
-      description: 'Drag-and-drop application for building RAG workflows, inspired by Scratch.',
-    },
-  ],
   links: [
-    { text: 'blog', url: 'https://allentropy.wordpress.com/' },
+    { text: 'blog', url: 'https://allentropy.netlify.app/' },
     { text: 'github', url: 'https://github.com/yntianyu' },
     { text: 'linkedin', url: 'https://www.linkedin.com/in/ey101/' },
     { text: 'email', url: 'mailto:elizabeth.rose.yan@gmail.com' },
   ],
   blogPosts: [
     {
+      title: 'a short rant',
+      date: 'Apr 22, 2026',
+      url: 'https://allentropy.netlify.app/#post38',
+      excerpt: 'i loathe that society looks on at those pursuing a journey of performative “self growth” with admiration, and i do mean the self growth that can only be contained within quotation marks.',
+    },
+    {
       title: 'me, boiled down',
       date: 'Feb 2, 2026',
-      url: 'https://yntianyu.github.io/allentropy/post.html?id=37',
+      url: 'https://allentropy.netlify.app/#post37',
       excerpt: 'i downplay every single one of my achievements. i don\'t mean to, but somehow, it always comes back to these three words: "onto the next."',
     },
     {
       title: 'fearing, but also looking forward',
       date: 'Feb 2, 2026',
-      url: 'https://yntianyu.github.io/allentropy/post.html?id=36',
+      url: 'https://allentropy.netlify.app/#post36',
       excerpt: 'how do i verbalize this? i\'ve been thinking about this for a while, unsure of how to put pen to paper.',
     },
     {
       title: 'the hardest thing to understand in this world is our own feelings.',
       date: 'Dec 7, 2025',
-      url: 'https://yntianyu.github.io/allentropy/post.html?id=35',
+      url: 'https://allentropy.netlify.app/#post35',
       excerpt: '"we are a mosaic of everyone we\'ve ever loved." i\'ve been thinking about this quote a lot more often recently.',
-    },
-    {
-      title: 'dump.',
-      date: 'Dec 6, 2025',
-      url: 'https://yntianyu.github.io/allentropy/post.html?id=34',
-      excerpt: 'small things that are on my mind.',
     },
   ],
 }
 
-// Icons
 // Icons
 const FolderIcon = () => (
   <svg viewBox="0 0 16 16" fill="currentColor">
@@ -269,7 +255,7 @@ function TerminalContent() {
 
     switch (command) {
       case 'help':
-        response = 'Available commands: help, about, skills, contact, clear, echo [text]'
+        response = 'Available commands: help, about, skills, contact, cat, clear, echo [text]'
         break
       case 'about':
         response = PROFILE.bio
@@ -279,6 +265,13 @@ function TerminalContent() {
         break
       case 'contact':
         response = PROFILE.links.map(l => l.text + ': ' + l.url).join('\n')
+        break
+      case 'cat':
+        response = `
+        へ        /| 
+     ૮ - ՛ )  ♡  ( \`- 7.   
+      / ⁻ ៸|     |、⁻〵
+    乀(ˍ,ل ل     じしˍ,)ノ`
         break
       case 'clear':
         setOutput([])
@@ -319,86 +312,15 @@ function TerminalContent() {
   )
 }
 
-// Single Blog Post Content
-function SingleBlogPostContent({ index, blogPosts }) {
-  const post = blogPosts[index]
-  if (!post) return null
-  return (
-    <>
-      <h1>{post.title}</h1>
-      <div className="meta" style={{ marginBottom: '24px' }}>{post.date}</div>
-      <div style={{ marginBottom: '32px', lineHeight: '1.6' }}>
-        <p>{post.excerpt}</p>
-      </div>
-      <div style={{ borderTop: '1px solid var(--border)', paddingTop: '16px', marginTop: '24px' }}>
-        <a 
-          href={post.url} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          style={{ 
-            color: 'var(--accent)', 
-            textDecoration: 'none', 
-            fontSize: '14px'
-          }}
-        >
-          View the entire post &rarr;
-        </a>
-      </div>
-    </>
-  )
-}
-
 // Main App
 function App() {
   const [modal, setModal] = React.useState(null)
   const [selectedExp, setSelectedExp] = React.useState(null)
-  const [selectedBlogPost, setSelectedBlogPost] = React.useState(null)
   const [time, setTime] = React.useState('')
   const [blogPosts, setBlogPosts] = React.useState(PROFILE.blogPosts) // fallback to static
 
-  // Fetch blog posts from RSS feed
-  React.useEffect(() => {
-    const fetchBlogPosts = async () => {
-      try {
-        const response = await fetch('/feed.xml')
-        const text = await response.text()
-        const parser = new DOMParser()
-        const xml = parser.parseFromString(text, 'text/xml')
-        
-        const items = xml.querySelectorAll('item')
-        const posts = Array.from(items).map(item => {
-          const title = item.querySelector('title')?.textContent || ''
-          const link = item.querySelector('link')?.textContent || ''
-          const description = item.querySelector('description')?.textContent || ''
-          const pubDate = item.querySelector('pubDate')?.textContent || ''
-          
-          // Parse and format the date
-          const date = new Date(pubDate)
-          const formattedDate = date.toLocaleDateString('en-US', { 
-            month: 'short', 
-            day: 'numeric', 
-            year: 'numeric' 
-          })
-          
-          return {
-            title,
-            date: formattedDate,
-            url: link,
-            excerpt: description
-          }
-        })
-        
-        if (posts.length > 0) {
-          setBlogPosts(posts)
-        }
-      } catch (error) {
-        console.error('Error fetching blog posts:', error)
-        // Keep fallback posts on error
-      }
-    }
-    
-    fetchBlogPosts()
-  }, [])
+  // Note: To enable real-time blog fetching, add an RSS feed to your Netlify blog
+  // and uncomment/update this useEffect to parse the feed
 
   React.useEffect(() => {
     const updateTime = () => {
@@ -426,7 +348,6 @@ function App() {
       case 'about': return <AboutContent />
       case 'experience': return <ExperienceContent />
       case 'single-experience': return <SingleExperienceContent index={selectedExp} />
-      case 'single-blog-post': return <SingleBlogPostContent index={selectedBlogPost} blogPosts={blogPosts} />
       case 'spotify': return <SpotifyContent />
       case 'terminal': return <TerminalContent />
       default: return null
@@ -462,15 +383,17 @@ function App() {
           <div className="widget">
             <div className="widget-header">Blog</div>
             <ul className="widget-list">
-              {blogPosts.map((post, index) => (
-                <li className="widget-item" key={post.url} onClick={() => { setSelectedBlogPost(index); setModal('single-blog-post'); }}>
-                  <div className="widget-item-title">{post.title}</div>
-                  <div className="widget-item-meta">{post.date}</div>
-                  <div className="widget-item-desc">{post.excerpt}</div>
+              {blogPosts.map((post) => (
+                <li className="widget-item" key={post.url}>
+                  <a href={post.url} target="_blank" rel="noreferrer" style={{color: 'inherit', textDecoration: 'none', display: 'block'}}>
+                    <div className="widget-item-title">{post.title}</div>
+                    <div className="widget-item-meta">{post.date}</div>
+                    <div className="widget-item-desc">{post.excerpt}</div>
+                  </a>
                 </li>
               ))}
             </ul>
-            <a className="widget-footer" href="https://yntianyu.github.io/allentropy/" target="_blank" rel="noreferrer" style={{color: 'inherit', textDecoration: 'none', display: 'block'}}>
+            <a className="widget-footer" href="https://allentropy.netlify.app/" target="_blank" rel="noreferrer" style={{color: 'inherit', textDecoration: 'none', display: 'block'}}>
               Read more posts &rarr;
             </a>
           </div>
@@ -491,14 +414,8 @@ function App() {
 
       {modal && (
         <Modal 
-          title={
-            modal === 'single-experience' && selectedExp !== null 
-              ? PROFILE.experience[selectedExp]?.org 
-              : modal === 'single-blog-post' && selectedBlogPost !== null
-              ? blogPosts[selectedBlogPost]?.title
-              : modal
-          } 
-          onClose={() => { setModal(null); setSelectedExp(null); setSelectedBlogPost(null); }}
+          title={modal === 'single-experience' && selectedExp !== null ? PROFILE.experience[selectedExp]?.org : modal} 
+          onClose={() => { setModal(null); setSelectedExp(null); }}
         >
           {renderModalContent()}
         </Modal>
